@@ -27,9 +27,9 @@ foreach ($plants as $plant){
 
 
 foreach($plantArray as $laPlante){
-    echo('<div class="card">');
+    echo('<div class="card" style="width: 18rem;" >');
     echo('<div class="card-body">');
-    echo('<img class="card-img-top" src="$laPlante->getImgUrl()" alt="Card image cap">');
+    echo('<img class="card-img-top" src="' . $laPlante->getImgUrl() .'" alt="Card image cap">');
     echo('<h5 class="card-title">' . $laPlante->getName() . '</h5>');
     echo('<h6 class="card-subtitle mb-2 text-muted">' . $laPlante->getScientificName() . '</h6>');
     echo('<p class="card-text">' . $laPlante->getDescription() . '</p>');
