@@ -8,8 +8,6 @@
 
 <body>
 
-<?php include('inc/menu.php'); ?>
-
 <section>
 
     <?php include('inc/plant_list.php'); ?>

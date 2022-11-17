@@ -14,7 +14,7 @@
 <body>
 <?php include 'inc/menu.php'; ?>
 <main>
-    <p>MAIN</p>
+
     <?php require $templatePath ?>
 </main>
 <?php include '_footer.php'; ?>
