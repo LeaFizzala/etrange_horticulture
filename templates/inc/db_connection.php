@@ -13,14 +13,4 @@ try{
 }
 
 ?>
-<!-- on prépare d'abord la query-->
-<?php
-$plantList = $mysqlConnection->prepare('SELECT * FROM plants');
-?>
-<!-- Puis on l'exécute et on récupère les données sous forme de tableau-->
-<?php
-$plantList->execute();
-global $plants;
-$plants = $plantList->fetchAll();
 
-?>

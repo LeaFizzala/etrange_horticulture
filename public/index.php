@@ -1,2 +1,5 @@
 <?php
-require_once '../templates/home.php';
+
+
+require dirname(__DIR__) . '/lib/autoload.php';
+require dirname(__DIR__) . '/lib/router.php';

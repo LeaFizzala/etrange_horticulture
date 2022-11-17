@@ -1,21 +1,22 @@
 <?php
 
+namespace entities;
 class Plant
 {
-    private String $name;
-    private String $scientific_name;
-    private String $description;
-    private String $img_url;
+    private string $name;
+    private string $scientific_name;
+    private string $description;
+    private string $img_url;
 
-    public function __construct(String $nom,
-                                String $nom_scientifique,
-                                String $description,
-                                String $img_url)
+    public function __construct(string $nom,
+                                string $nom_scientifique,
+                                string $description,
+                                string $img_url)
     {
-    $this-> name = $nom;
-    $this -> scientific_name = $nom_scientifique;
-    $this -> description = $description;
-    $this ->img_url = $img_url;
+        $this->name = $nom;
+        $this->scientific_name = $nom_scientifique;
+        $this->description = $description;
+        $this->img_url = $img_url;
     }
 
     /**
