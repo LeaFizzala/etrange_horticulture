@@ -3,6 +3,7 @@
 namespace entities;
 class User
 {
+    private int $id;
     private string $prenom;
     private string $nom;
     private string $email;
