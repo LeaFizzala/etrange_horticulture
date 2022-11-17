@@ -6,7 +6,7 @@
 <body>
 
 		<h1>Register as a new member</h1>
-		<form action="insert.php" method="post">
+		<form action="..\templates\inc\insert_user.php" method="post">
 
 <p>
 			<label for="firstName">First Name:</label>
@@ -23,8 +23,13 @@
 
 <p>
 			<label for="emailAddress">Email Address:</label>
-			<input type="text" name="email" id="emailAddress">
+			<input type="email" name="email" id="emailAddress">
 			</p>
+
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+            </p>
 
 			<input type="submit" value="Submit">
 		</form>
