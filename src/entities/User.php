@@ -1,6 +1,6 @@
 <?php
 
-namespace entities;
+namespace App\entities;
 class User
 {
     private int $id;
@@ -15,13 +15,11 @@ class User
      * @param string $email
      * @param string $password
      */
-    public function __construct(string $prenom, string $nom, string $email, string $password)
+    public function __construct()
     {
-        $this->prenom = $prenom;
-        $this->nom = $nom;
-        $this->email = $email;
-        $this->password = $password;
+
     }
+
 
     /**
      * @return string
@@ -53,6 +51,38 @@ class User
     public function getPassword(): string
     {
         return $this->password;
+    }
+
+    /**
+     * @param string $prenom
+     */
+    public function setPrenom(string $prenom): void
+    {
+        $this->prenom = $prenom;
+    }
+
+    /**
+     * @param string $nom
+     */
+    public function setNom(string $nom): void
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @param string $password
+     */
+    public function setPassword(string $password): void
+    {
+        $this->password = $password;
     }
 
 

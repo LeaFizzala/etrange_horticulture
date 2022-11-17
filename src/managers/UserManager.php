@@ -1,4 +1,6 @@
 <?php
+
+namespace App\managers;
 use Lib\Manager\AbstractManager;
 use App\entities\User;
 

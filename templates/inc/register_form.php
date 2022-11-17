@@ -6,7 +6,7 @@
 <body>
 
 		<h1>Register as a new member</h1>
-		<form action="..\templates\inc\insert_user.php" method="post">
+		<form action="add_user" method="post">
 
 <p>
 			<label for="firstName">First Name:</label>
