@@ -16,5 +16,9 @@ const ROUTES = [
     'add_user' => [
         'controller' => App\controllers\UserController::class,
         'method' => 'addUser'
+    ],
+    'success' => [
+        'controller' => App\controllers\UserController::class,
+        'method' => 'success'
     ]
 ];

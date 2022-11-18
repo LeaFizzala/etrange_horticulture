@@ -20,8 +20,11 @@ class UserController extends AbstractController
             $user->setEmail($_POST['email']);
             $user->setPassword($_POST['password']);
             $userManager->add($user);
-            return $this->redirectToRoute('article_index');
+            return $this->redirectToRoute('success');
         }
         return $this->renderView('article/add.php');
+    }
+    public function success(){
+        return $this->renderView('templates/success.php');
     }
 }
