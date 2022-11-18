@@ -12,7 +12,7 @@ abstract class AbstractController
     protected function redirectToRoute(string $name, array $params = []): void {
         $uri = $_SERVER['SCRIPT_NAME'] . "?page=" . $name; //nom de la page actuelle
         // à laquelle on colle le param page suivi de la valeur de page passée en paramètre
-
+echo($uri);
         if (!empty($params)) { // si il y a des paramètres à passer à l'URL GET
             $strParams = [];
             foreach ($params as $key => $val) { // on divise chaque couple clé/valeur et on l'encode en URL

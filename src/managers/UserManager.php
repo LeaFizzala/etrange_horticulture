@@ -9,14 +9,18 @@ class UserManager extends AbstractManager
     public function find(int $id) {
         return $this->findOne(User::class, [ 'id' => $id ]);
     }
+    protected static function hashPassword(string $password) : string {
+        return password_hash($password,PASSWORD_ARGON2ID);
+    }
 
     public function add(User $user) {
         return $this->create(User::class, [
-                'prenom' => $user->getPrenom(),
-                'nom' => $user->getNom(),
-                'email' => $user->getEmail(),
-                'password' => $user->getPassword()
+                'user_firstname' => $user->getPrenom(),
+                'user_lastname' => $user->getNom(),
+                'user_email' => $user->getEmail(),
+                'user_password' => UserManager::hashPassword($user->getPassword())
             ]
         );
     }
+
 }

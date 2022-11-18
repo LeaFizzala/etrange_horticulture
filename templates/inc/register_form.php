@@ -6,7 +6,7 @@
 <body>
 
 		<h1>Register as a new member</h1>
-		<form action="add_user" method="post">
+		<form action="/?page=add_user" method="post">
 
 <p>
 			<label for="firstName">First Name:</label>

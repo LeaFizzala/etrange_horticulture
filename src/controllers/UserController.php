@@ -10,6 +10,7 @@ class UserController extends AbstractController
 
     public function addUser(){
         echo('Entering function addUser');
+        var_dump($_POST);
         if(!empty($_POST)){
             var_dump($_POST);
             $user = new User();
@@ -18,6 +19,7 @@ class UserController extends AbstractController
             $user->setNom($_POST['last_name']);
             $user->setEmail($_POST['email']);
             $user->setPassword($_POST['password']);
+            $userManager->add($user);
             return $this->redirectToRoute('article_index');
         }
         return $this->renderView('article/add.php');
