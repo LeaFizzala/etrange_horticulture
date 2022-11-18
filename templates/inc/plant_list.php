@@ -37,20 +37,22 @@ foreach ($plants as $plant){
 }
 ?>
 <section class="row justify-content-around">
-<?php
-foreach($plantArray as $laPlante){?>
-    <div class="card" class="col-md-auto" style="width: 18rem;" >
-    <div class="card-body">
-    <img class="card-img-top" src="<?=$laPlante->getImgUrl() ?>" alt="Card image cap">
-    <h5 class="card-title"><?php echo( $laPlante->getName()) ?> </h5>
-    <h6 class="card-subtitle mb-2 text-muted"> <?php echo( $laPlante->getScientificName()) ?> </h6>
-    <p class="card-text"> <?php echo( $laPlante->getDescription()) ?> </p>
+    <?php
+    foreach($plantArray as $laPlante){?>
+            <div class="col">
+        <div class="card shadow-sm" style="width: 18rem;"  >
 
-    </div>
-    </div>
+            <div class="card-body">
+                <img class="card-img-top" src="<?=$laPlante->getImgUrl() ?>" alt="Card image cap">
+                <h5 class="card-title"><?php echo( $laPlante->getName()) ?> </h5>
+                <h6 class="card-subtitle mb-2 text-muted"> <?php echo( $laPlante->getScientificName()) ?> </h6>
+                <p class="card-text"> <?php echo( $laPlante->getDescription()) ?> </p>
 
+            </div>
+        </div>
+            </div>
 
-<?php }
-?>
+    <?php }
+    ?>
 </section>
 

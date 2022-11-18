@@ -8,9 +8,10 @@
 
 <body>
 
-<section>
-
+<section class="album py-5 bg-light" >
+<div class="container">
     <?php include('inc/plant_list.php'); ?>
+</div>
 </section>
 
 
