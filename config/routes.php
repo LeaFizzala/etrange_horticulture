@@ -20,5 +20,9 @@ const ROUTES = [
     'success' => [
         'controller' => App\controllers\UserController::class,
         'method' => 'success'
+    ],
+    'quizz' => [
+        'controller' => App\controllers\QuizzController::class,
+        'method' => 'displayQuizz'
     ]
 ];
