@@ -16,15 +16,15 @@ private array $allQuestions;
 
     //fonction pour afficher les questions
     public function displayQuestions(){
+        $allQuestions = array();
         foreach ($this->allQuestions as $oneQuestion){
             // appeler une vue ici une sorte vue displayQuestion
             // et l'utiliser pour l'affichage en évitant le HTML dans les entités
-            echo('<div class="container">');
-            echo($oneQuestion->getQuestion());
-           $oneQuestion->createAnswerList();
-            echo($oneQuestion->getButton());
-           echo('</div>');
+            // peut-être faire appel à la fonction renderView et retourner une vue
+
+             $allQuestions[] =  $oneQuestion;
         }
+        return ($allQuestions);
     }
 
     /**

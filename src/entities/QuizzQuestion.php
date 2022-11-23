@@ -8,7 +8,7 @@ class QuizzQuestion
     private int $questionNumber;
     private string $question;
     private array $answerList;
-    private string $button = '<input type="submit" value="Submit"></input>';
+    private string $button = 'Submit !';
 
     public function __construct(int $questionNum, string $question, $answerList){
         $this->questionNumber = $questionNum;
@@ -18,19 +18,19 @@ class QuizzQuestion
 
     //fonction pour remplir l'objet Question
     public function createAnswerList() {
-
+        $answerList = array();
         foreach ($this->getAnswerList() as $oneAnswer){
-            echo( '<input class="form-check-input" type="radio" name="question-5-answers" value=$number />
-<label class="form-check-label" for="inlineCheckbox2">' . $oneAnswer . '</label>' );
 
+            $answerList[] = $oneAnswer;
         }
+        return $answerList;
     }
 
 
     /**
      * @return int
      */
-    public function getQuestionUmber(): int
+    public function getQuestionNumber(): int
     {
         return $this->questionNumber;
     }

@@ -1,24 +1,19 @@
-<?php
-use \App\entities\QuizzQuestion;
-use \App\entities\Questionnaire;
-$question1 = new QuizzQuestion(1,"What's your favorite pet ?" ,['a', 'b', 'c', 'd']);
-$question2 = new QuizzQuestion(2,"What's your favorite color ?",['a', 'b', 'c', 'd']);
-$question3 = new QuizzQuestion(3,"Where would you picture your perfect home ?",['a', 'b', 'c', 'd']);
-$question4 = new QuizzQuestion(4,"Why ?",['a', 'b', 'c', 'd']);
-$question5 = new QuizzQuestion(5,"How ?",['a', 'b', 'c', 'd']);
-$question6 = new QuizzQuestion(6,"Favourite soup ?",['a', 'b', 'c', 'd']);
 
-$listQuestions = array();
-array_push($listQuestions, $question1, $question2, $question3, $question4, $question5);
-
-$questionnaire = new Questionnaire($listQuestions);
-
-?>
-
+<section>
 <form id="plant-quizz" method="post" action="take-quizz.php">
     <div class="form-group">
-    <?php
-$questionnaire->displayQuestions();
-?>
+        <?php if (isset($data['questions']))
+            foreach ($data['questions'] as $oneQuestion){
+                echo('<div class="container">');
+                echo($oneQuestion->getQuestion());
+                foreach ($oneQuestion->createAnswerList() as $answer){
+                    echo( '<input class="form-check-input" type="radio" name="question-5-answers" value=$number />
+<label class="form-check-label" for="inlineCheckbox2">' . $answer . '</label>' );
+                }
+                echo('<input type="submit" value=' . $oneQuestion->getButton() . '></input>');
+                echo('</div>');
+            }
+             ?>
     </div>
 </form>
+</section>
