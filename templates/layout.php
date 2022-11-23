@@ -18,5 +18,6 @@
     <?php require $templatePath ?>
 </main>
 <?php include '_footer.php'; ?>
+<script src="assets/quizz.js"></script>
 </body>
 </html>

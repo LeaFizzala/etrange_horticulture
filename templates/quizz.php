@@ -7,7 +7,7 @@
 
                     //on crée une condition pour commencer par n'afficher que la première question
                     if($oneQuestion == $data['questions'][0] ){
-                        echo('<div class="container">');
+                        echo('<div id="card1" class="visible-question" class="container">');
                         echo('<div class="card shadow-sm" style="width: 30rem;"  >');
                         echo('<div class="card-body">');
                         echo('<h5 class="card-title">' . $oneQuestion->getQuestion() . '</h5>');
