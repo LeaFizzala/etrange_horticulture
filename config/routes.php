@@ -24,5 +24,9 @@ const ROUTES = [
     'quizz' => [
         'controller' => App\controllers\QuizzController::class,
         'method' => 'displayQuizz'
+    ],
+    'results' => [
+        'controller' => App\controllers\QuizzController::class,
+        'method' => 'displayResults'
     ]
 ];

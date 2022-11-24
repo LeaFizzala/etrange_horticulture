@@ -1,7 +1,3 @@
 .invisible-question{
-    visibility: hidden;
-}
-
-.visible-question{
-    color:red;
+   display: none;
 }

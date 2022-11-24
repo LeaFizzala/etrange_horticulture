@@ -29,6 +29,13 @@ class QuizzController extends AbstractController{
             ['title' => 'Questionnaire',
             'questions' => $titreQuestion]);
     }
+    public function  displayResults(){
+        var_dump($_POST);
+        // on lit bien la valeur des boutons cliqués mais pour le moment, pour établir les résultats il faudrait
+        // que chaque bouton soit analysé
+        // or il vaudrait mieux des classes de boutons du genre 'personnalité a', 'personnalité b'
+        // il faudrait donc peut-être penser une classe réponse, qui possède elle-même ses caractéristiques
+    }
 }
 
 
