@@ -10,20 +10,20 @@ class QuizzQuestion
     private array $answerList;
     private string $button = 'Submit !';
 
-    public function __construct(int $questionNum, string $question, $answerList){
+    public function __construct(int $questionNum, string $question ){
         $this->questionNumber = $questionNum;
         $this->question = $question;
-        $this->answerList = $answerList;
+
     }
 
     //fonction pour remplir l'objet Question
-    public function createAnswerList() {
-        $answerList = array();
-        foreach ($this->getAnswerList() as $oneAnswer){
+    public function createAnswerList($answerArray) {
+        $this->answerList = array();
+        foreach ($answerArray as $oneAnswer){
 
-            $answerList[] = $oneAnswer;
+            $this->answerList[] = $oneAnswer;
         }
-        return $answerList;
+
     }
 
 
